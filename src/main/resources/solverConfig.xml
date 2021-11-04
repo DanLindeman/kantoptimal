@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+<!--<environmentMode>FULL_ASSERT</environmentMode>-->
+<!--<environmentMode>FAST_ASSERT</environmentMode>-->
+<solutionClass>net.spantree.kantoptimal.domain.Team</solutionClass>
+<entityClass>net.spantree.kantoptimal.domain.TeamSlot</entityClass>
+
+<scoreDirectorFactory>
+    <scoreDrl>rules.drl</scoreDrl>
+</scoreDirectorFactory>
+
+<termination>
+    <secondsSpentLimit>10</secondsSpentLimit>
+    <bestScoreLimit>0hard/0soft</bestScoreLimit>
+</termination>
+<constructionHeuristic/>
+<localSearch>
+    <acceptor>
+        <simulatedAnnealingStartingTemperature>2hard/100soft</simulatedAnnealingStartingTemperature>
+    </acceptor>
+    <forager>
+        <acceptedCountLimit>4</acceptedCountLimit>
+    </forager>
+</localSearch>
+</solver>
